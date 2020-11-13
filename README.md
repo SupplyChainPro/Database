@@ -4,14 +4,14 @@
 ![Code Coverage](https://img.shields.io/badge/coverage-80%25-green)
 ![python Version](https://img.shields.io/pypi/pyversions/Flask)
  
-<img src="https://github.com/SupplyChainPro/Database/blob/master/Screenshot%20from%202020-11-13%2010-46-44.png" alt="drawing" width="650"/>
+<img src="https://github.com/aivatanproducts/aoc001-intelliSearch/blob/master/Images/Intellisearch.png" alt="drawing" width="650"/>
 
 
 
 #### intelligently searching and Scraping web data using Machine learning 
 
 
-Thies API provides a framework for intelligently searching, finding and extracting data using machine learning techniques from either a source that is provided or a default sources. Api will provide the data in predetermined format.
+This API provides a framework for intelligently searching, finding, and extracting data using machine learning techniques from either a source that is provided or a default source. API will provide the data in a predetermined format.
 
 
 ## Table of content
@@ -61,7 +61,7 @@ print(response.text)
 ```
 
 
-OR installing the setup on your local machine 
+OR install the setup on your local machine 
  
 ### Install ( for Ubuntu based Linux distribution )
 
@@ -92,15 +92,15 @@ $ python3 api.py
 
 ## API overview
 
-The API is  RESTFUL and returns the output in the json or xml format 
+The API is  RESTFUL and returns the output in the JSON or XML format 
 
-You can dicrectly call API using Python  (or any  other programming language ) 
+You can directly call API using Python  (or any  other programming language ) 
 
 ### API inputs :
 
 ```
 {
-  "searchText": "string",
+  "search_text": "string",
   "url": "string",
   "context": "string",
   "data_format": "string",
@@ -115,11 +115,11 @@ You can dicrectly call API using Python  (or any  other programming language )
 
 
 
- searchText : string,
+ search_text: string,
               key Word for searching 
               
  url	:        string,
-              Url of the site to be searched and extracted. If left blank our default list of sites will be scapped,
+              Url of the site to be searched and extracted. If left blank our default list of sites will be scrapped,
               default: https://www.bbc.com/news
         
  context :    string,
@@ -128,14 +128,14 @@ You can dicrectly call API using Python  (or any  other programming language )
  data_format :string,
               Format of the data returned,
               default: Json,
-              Avalable: Json and xml
+              Available: Json and xml
                
  case_match	: boolean,
               For searching through case match,
               default: true
   
  base_match	: boolean,
-              For searching through base match,
+              For searching through the base match,
               default: false
              
  lemmatized_match	: boolean,
@@ -229,30 +229,30 @@ NLP
 
 
 Api provides the following featured framework
-- Natural Language Processing(NLP) and Understanding(NLU) - Relavance in matching content
-- Named entity recoginition(NER) functions - To identify related entities
-- web scrapping techiques to extract that relavant data
-- post processing data - packaging and format marshaling
+- Natural Language Processing(NLP) and Understanding(NLU) - Relevance in matching content
+- Named entity recognition(NER) functions - To identify related entities
+- web scrapping techniques to extract that relevant data
+- post-processing data - packaging and format marshaling
 
 
 ## Flow Diagram
 
 
-<img src="https://github.com/SupplyChainPro/Database/blob/master/intelliSearch%20%20(2).png" alt="drawing" width="500" hight = "1000"/>
+<img src="https://github.com/aivatanproducts/aoc001-intelliSearch/blob/master/Images/intelliSearchFlow.png" alt="drawing" width="500" hight = "1000"/>
 
 
 ## SandBox
 
-Please fell free to play with the API in our sandbox 
+Please feel free to play with the API in our sandbox 
 
-sandbox link : https://aoc001-intellisearch.herokuapp.com/
+sandbox link: https://aoc001-intellisearch.herokuapp.com/
 
 
 ## Contributing
 
 
 #### Issues
-In the case of a bug report, bugfix or a suggestions, please feel free to open an issue.
+In the case of a bug report, bugfix or suggestions, please feel free to open an issue.
 
 #### Pull request
 Pull requests are always welcome, and we will do our best to do reviews as fast as we can.
@@ -270,5 +270,6 @@ This project is licensed under the [GPL License](https://github.com/aivatanprodu
 ## Motivation
 longing to learn and use the cutting edge machine learning technologies 
 drives us to build and optimize the modern search techniques.
+
 
 
