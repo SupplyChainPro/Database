@@ -1,10 +1,10 @@
 # IntiliSearch API 
 
-![Github License](https://img.shields.io/badge/license-MIT-green)
-![Code Coverage](https://img.shields.io/badge/coverage-70%25-green)
-![React Version](https://img.shields.io/badge/react-v16.12.0-blue.svg)
+![Github License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+![Code Coverage](https://img.shields.io/badge/coverage-80%25-green)
+![python Version](https://img.shields.io/pypi/pyversions/Flask)
  
-<img src="https://github.com/SupplyChainPro/Database/blob/master/Screenshot%20from%202020-11-13%2010-46-44.png" alt="drawing" width="800"/>
+<img src="https://github.com/SupplyChainPro/Database/blob/master/Screenshot%20from%202020-11-13%2010-46-44.png" alt="drawing" width="650"/>
 
 
 
@@ -17,6 +17,7 @@ Thies API provides a framework for intelligently searching, finding and extracti
 ## Table of content
 
 - [**Getting Started**](#getting-started)
+- [API overview ](#api-overview)
 - [Built With](#built-with)
 - [Features](#features)
 - [Flow Diagram](#flow-diagram)
@@ -26,12 +27,43 @@ Thies API provides a framework for intelligently searching, finding and extracti
 - [Get Help](#get-help)
 - [Motivation](#motivation) 
 
-## Getting Started
- 
+## Getting Started 
 
+You can use the API 
+
+### API endpoint 
+
+Using the URL 
+
+``` 
+https://aoc001-intellisearch.herokuapp.com/iSearch/{input_data}
+```
+
+this can be done with python Request 
+
+```
+import requests
+
+data = {
+        "search_text": "Biden",
+        "url": "https://www.nbcnews.com/",
+        "context": "",
+        "data_format": "json",
+        "case_match": True,
+        "base_match": True,
+        "lemmatized_match": True,
+        "context_match": False
+       }
+
+response = requests.post( "https://aoc001-intellisearch.herokuapp.com/iSearch/" , json = data)
+
+print(response.text)
+```
+
+
+OR installing the setup on your local machine 
  
- 
-### Install guide for Ubuntu based Linux distribution
+### Install ( for Ubuntu based Linux distribution )
 
 #### Clone the repo
 
@@ -58,10 +90,138 @@ $ python3 api.py
 ```
 
 
+## API overview
+
+The API is  RESTFUL and returns the output in the json or xml format 
+
+You can dicrectly call API using Python  (or any  other programming language ) 
+
+### API inputs :
+
+```
+{
+  "searchText": "string",
+  "url": "string",
+  "context": "string",
+  "data_format": "string",
+  "case_match": true,
+  "base_match": false,
+  "lemmatized_match": false,
+  "context_match": false
+}
+```
+
+
+
+
+
+ searchText : string,
+              key Word for searching 
+              
+ url	:        string,
+              Url of the site to be searched and extracted. If left blank our default list of sites will be scapped,
+              default: https://www.bbc.com/news
+        
+ context :    string,
+              Context string helps us get more relevant data,
+
+ data_format :string,
+              Format of the data returned,
+              default: Json,
+              Avalable: Json and xml
+               
+ case_match	: boolean,
+              For searching through case match,
+              default: true
+  
+ base_match	: boolean,
+              For searching through base match,
+              default: false
+             
+ lemmatized_match	: boolean,
+              For searching through lemmatized match,
+              default: false
+  
+ context_match	: boolean,
+              involvels context searching,
+              default: false
+              
+              
+### API Outputs/Returns  :
+
+  API returns the scraped data in the provided format
+  
+  Example Json Output
+  
+```
+  {
+  "status": "OK",
+  "statusCode": 200,
+  "inputs": {
+    "searchtext": "Bidenzcxfghjkl",
+    "url": "https://www.nbcnews.com/",
+    "context": "",
+    "data_format": "json",
+    "case_match": true,
+    "base_match": true,
+    "lemmatized_match": true,
+    "context_match": false
+  },
+  "output": {
+    "case_match": {
+      "p": [],
+      "li": [],
+      "h1": [],
+      "h2": [],
+      "h3": [],
+      "h4": [],
+      "td": [],
+      "em": [],
+      "a": [],
+      "div": [],
+      "span": []
+    },
+    "base_match": {
+      "p": [],
+      "li": [],
+      "h1": [],
+      "h2": [],
+      "h3": [],
+      "h4": [],
+      "td": [],
+      "em": [],
+      "a": [],
+      "div": [],
+      "span": []
+    },
+    "lemmatized_match": {
+      "p": [],
+      "li": [],
+      "h1": [],
+      "h2": [],
+      "h3": [],
+      "h4": [],
+      "td": [],
+      "em": [],
+      "a": [],
+      "div": [],
+      "span": []
+    }
+  },
+  "Context-matched": {},
+  "Entities:": {}
+}
+
+```
+  
+  
+  
 ## Built With
 
 Python
+
 flask
+
 NLP
 
 
@@ -100,12 +260,12 @@ Pull requests are always welcome, and we will do our best to do reviews as fast 
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/this/project/blob/master/LICENSE)
+This project is licensed under the [GPL License](https://github.com/aivatanproducts/aoc001-intelliSearch/blob/master/LICENSE)
 
 
 ## Get Help
 - Contact us on admin@aivatan.cf
-- If appropriate, [open an issue](https://github.com/this/project/issues) on GitHub
+- If appropriate, [open an issue](https://github.com/aivatanproducts/aoc001-intelliSearch/issues) on GitHub
 
 ## Motivation
 longing to learn and use the cutting edge machine learning technologies 
