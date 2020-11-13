@@ -3,8 +3,10 @@
 ![Github License](https://img.shields.io/badge/license-MIT-green)
 ![Code Coverage](https://img.shields.io/badge/coverage-70%25-green)
 ![React Version](https://img.shields.io/badge/react-v16.12.0-blue.svg)
+ 
+<img src="https://github.com/SupplyChainPro/Database/blob/master/Screenshot%20from%202020-11-13%2010-46-44.png" alt="drawing" width="800"/>
 
-![example](https://github.com/SupplyChainPro/Database/blob/master/Screenshot%20from%202020-11-13%2010-46-44.png)
+
 
 #### intelligently searching and Scraping web data using Machine learning 
 
@@ -76,7 +78,8 @@ Api provides the following featured framework
 ## Flow Diagram
 
 
-![flow](https://github.com/SupplyChainPro/Database/blob/master/APIFLOW.png)
+<img src="https://github.com/SupplyChainPro/Database/blob/master/intelliSearch%20%20(2).png" alt="drawing" width="500" hight = "1000"/>
+
 
 ## SandBox
 
